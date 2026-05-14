@@ -137,9 +137,15 @@ export function ModalDetalhes({ isOpen, onClose, pais }) {
                 </span>
               </div>
               <div className="modal-item">
-                <span className="modal-label">Domínio de internet</span>
+                <span className="modal-label">Link do maps</span>
                 <span className="modal-value">
-                  {detalhes.dominioInternet || "—"}
+                  <a
+                    href={detalhes.linkMaps || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ver no Google Maps
+                  </a>
                 </span>
               </div>
             </div>
