@@ -1,16 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+// import { useState } from 'react'
 import './App.css'
+import { CardPais } from './components/cardPais'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
+  const lidarComDetalhes = () => {
+    console.log("Navegando para detalhes do país...");
+    console.log("Abrindo detalhes do país...");
+  };
+
+const lidarComFavorito = () => {
+  console.log("Adicionando país aos favoritos...");
+  console.log("País adicionado aos favoritos!");
+};
 
   return (
-    <>
-      <h1>Oi</h1>
-    </>
+    <div style={{ padding: '2rem', display: 'flex', justifyContent: 'center' }}>
+      <CardPais 
+        bandeira=""
+        nome=""
+        capital="Brasília"
+        continente="Américas"
+        populacao={203000000}
+        aoClicarDetalhes={lidarComDetalhes}
+        aoClicarFavorito={lidarComFavorito}
+      />
+    </div>
   )
 }
 
